@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.underscore {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+.underscore::after {
+  content: "_";
+  background: white;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+.terminal {
+  background-color: #1e1e1e; /* Dark background */
+  color: #00ff00; /* Bright green text */
+  font-family: "Courier New", Courier, monospace; /* Monospace font */
+  padding: 20px; /* Padding inside the div */
+  border-radius: 5px; /* Rounded corners */
+  overflow-y: auto; /* Scrollable if content exceeds height */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slight shadow */
+  border: 1px solid #333; /* Border to resemble terminal frame */
+}
+
+.terminal-line {
+  margin: 0.2; /* No margin for each line */
+}
+
+.prompt {
+  color: #00ff00; /* Color for terminal prompt */
+}
