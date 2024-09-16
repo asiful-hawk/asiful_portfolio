@@ -1,3 +1,4 @@
+/* eslint-disable */
 import hrs from '../images/hrs.png';
 export default [
 
