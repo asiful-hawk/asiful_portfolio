@@ -55,7 +55,7 @@ export default function Body() {
             <br></br>
             <br></br>
 
-            <div className='col-md-10' style={{ justifyContent: 'center' }}>
+            <div style={{ justifyContent: 'center' }}>
                 {projects.map((project, index) => (
                     <><Card>
 
