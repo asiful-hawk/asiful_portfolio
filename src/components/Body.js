@@ -1,31 +1,40 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import projects from '../content/projects';
 import aboutMe from '../content/about-me';
 import { Canvas } from '@react-three/fiber';
 import { Stage } from '@react-three/drei';
-import Model from './Model';
 import { EffectComposer, Glitch } from '@react-three/postprocessing';
+import { TextA, TextB } from '../Model/Model';
 
 
 export default function Body() {
+    const [isModelA, setIsModelA] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsModelA(prev => !prev);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className='container'>
             <div>
                 <Canvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
                     <Suspense fallback={null}>
                         <Stage preset="rembrandt" intensity={1} environment="dawn">
-                            <Model />
+                            {isModelA ? <TextA /> : <TextB />}
                         </Stage>
                         <EffectComposer>
                             <Glitch
                                 chromaticAberrationOffset={[1.5, 3.5]}
-                                delay={[1.5, 3.5]} // min and max glitch delay
-                                duration={[0.6, 1.0]} // min and max glitch duration
-                                strength={[0.3, 1.0]} // min and max glitch strength
-                                active // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
-                                ratio={0.85} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+                                duration={[0.5, 1]} 
+                                delay={[1.4, 3]}
+                                strength={[0.3, 1.0]}
+                                ratio={0.85}
                             />
                         </EffectComposer>
                     </Suspense>
