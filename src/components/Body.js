@@ -29,6 +29,14 @@ export default function Body() {
                     </Suspense>
                 </Canvas>
             </div>
+            <div >
+                <p> I am a Software Developer with industry experience using Java (Spring Boot) and Angular 12. I have
+                worked on several cloud web applications. Implementation of client requirement using Leaflet
+                and other angular libraries and plug ins. Implementation of API.
+                I have worked on development of EBS software. Understanding business logic and using them to
+                create functions and UI using Java Spring Boot.
+                </p>
+            </div>
             <div className="terminal">
                 <p className="terminal-line"><span className="prompt">$</span> echo "Asiful Haque"</p>
                 <p className="terminal-line"><span className="prompt">$</span> loading restricted information..........</p>
