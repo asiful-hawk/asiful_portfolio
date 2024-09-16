@@ -8,6 +8,7 @@ import { Stage } from '@react-three/drei';
 import Model from './Model';
 import { EffectComposer, Glitch } from '@react-three/postprocessing';
 
+
 export default function Body() {
     return (
         <div className='container'>
@@ -19,6 +20,7 @@ export default function Body() {
                         </Stage>
                         <EffectComposer>
                             <Glitch
+                                chromaticAberrationOffset={[1.5, 3.5]}
                                 delay={[1.5, 3.5]} // min and max glitch delay
                                 duration={[0.6, 1.0]} // min and max glitch duration
                                 strength={[0.3, 1.0]} // min and max glitch strength
@@ -31,10 +33,10 @@ export default function Body() {
             </div>
             <div >
                 <p> I am a Software Developer with industry experience using Java (Spring Boot) and Angular 12. I have
-                worked on several cloud web applications. Implementation of client requirement using Leaflet
-                and other angular libraries and plug ins. Implementation of API.
-                I have worked on development of EBS software. Understanding business logic and using them to
-                create functions and UI using Java Spring Boot.
+                    worked on several cloud web applications. Implementation of client requirement using Leaflet
+                    and other angular libraries and plug ins. Implementation of API.
+                    I have worked on development of EBS software. Understanding business logic and using them to
+                    create functions and UI using Java Spring Boot.
                 </p>
             </div>
             <div className="terminal">
@@ -55,7 +57,8 @@ export default function Body() {
             <br></br>
             <br></br>
 
-            <div style={{ justifyContent: 'center' }}>
+            <div id="projects" style={{ justifyContent: 'center' }}>
+                <h5>Side Projects:</h5>
                 {projects.map((project, index) => (
                     <><Card>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Scrollchor } from 'react-scrollchor';
 
 export default function Header() {
 
@@ -13,8 +14,8 @@ export default function Header() {
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end">
                     <Nav>
-                        <Nav.Link href="#projects">Projects</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link><Scrollchor to="#projects" className="nav-link">Projects</Scrollchor></Nav.Link>
+                        <Nav.Link><Scrollchor to="#contact" className="nav-link">Contact</Scrollchor></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
