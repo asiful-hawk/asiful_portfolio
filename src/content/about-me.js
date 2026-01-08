@@ -3,7 +3,7 @@ export default [
     {
       id:1,
       input: 'Asiful.currentLocation',
-      return: '"Stoke-on-Trent, United Kingdom"',
+      return: '"Dhaka, Bangladesh"',
     },
     {
       id:2,

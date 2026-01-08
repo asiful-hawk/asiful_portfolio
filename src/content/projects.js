@@ -34,8 +34,8 @@ export default [
         skills: ['React', 'React Bootstrap', 'ThreeJS', 'PostProcessing'],
         image: hrs,
         links: {
-            github: 'https://github.com/asiful-hawk/HotelApp',
-            preview: '',
+            github: 'https://github.com/asiful-hawk/asiful_portfolio',
+            preview: 'https://asiful-portfolio.netlify.app/',
         },
     },
 
